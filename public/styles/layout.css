@@ -20,7 +20,17 @@ body {
   font-size: 24px;
   font-family: "Source Sans Pro";
 }
-
+main{
+  width: 90%;
+  margin: auto;
+}
+hr{
+  border: 1px solid black;
+}
+.counter{
+  position: absolute;
+  right: 45px;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

@@ -1,11 +1,36 @@
 .nav{
-  font-size: 30px;
-  height: 120px;
+  height: 95px;
+  width: 100%;
+  padding-right: 1.5em;
   padding-left: 1.5em;
   padding-top: 1.5em;
-  padding-bottom: 1em;
-    color: #FFFFFF;
-    font-weight: 700;
-    font-family: "Source Sans Pro";
-    background-color: #4056A1 ;
+  padding-bottom: 1em; 
+  color: #FFFFFF;
+  background-color: #4056A1 ;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+}
+button{
+  background-color: #4056A1 ;
+  font-family: "Bungee";
+  color: #FFFFFF;
+
+}
+#nav-span-1{
+  font-family: "Bungee";
+  font-size:30px;
+}
+.nav-span{
+font-weight: bold;
+font-family: sans-serif;
+}
+.nav-span-2{
+  font-weight: 100;
+  font-family: sans-serif;
+}
+.nav-span-3{
+  text-align: center;
+  color: red;
 }
