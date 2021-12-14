@@ -1,0 +1,16 @@
+hr{
+  border: 1px solid black;
+}
+.counter{
+  position: absolute;
+  right: 45px;
+}
+main{
+  width: 90%;
+  margin: auto;
+}
+button{
+  background-color: #4056A1 ;
+  font-family: "Bungee";
+  color: #FFFFFF;
+}
