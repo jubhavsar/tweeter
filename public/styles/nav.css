@@ -1,4 +1,4 @@
-.nav{
+nav {
   height: 95px;
   width: 100%;
   padding-right: 1.5em;
@@ -16,7 +16,6 @@ button{
   background-color: #4056A1 ;
   font-family: "Bungee";
   color: #FFFFFF;
-
 }
 #nav-span-1{
   font-family: "Bungee";
@@ -34,3 +33,9 @@ font-family: sans-serif;
   text-align: center;
   color: red;
 }
+#main-container {
+  margin:0 auto;
+  width: 100%;
+  position:absolute;
+  top:100%;
+  }
