@@ -69,22 +69,7 @@ const createTweetElement = function (tweet) {
          `);
   return $tweet;
 };
-const fetchTweets = () => {
-    $.ajax({
-      url: '/tweets',
-      method: 'GET',
-      dataType: 'json',
-      success: (tweets) => {
-        console.log("data", tweets);
-        renderTweets(tweets);
-      },
-      error: (err) => {
-        console.log(`error: ${err}`)
-      } 
-    });
-  };
 
-  fetchTweets();
 const $form = $('#new-tweet-form');
 console.log($form);
 $form.on('submit', function(event){
@@ -101,7 +86,8 @@ $form.on('submit', function(event){
   }).then(res =>{
       console.log(res);
   })  
-   
+
   })
+  renderTweets(data);
 });
 
