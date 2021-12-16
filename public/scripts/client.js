@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 
 const data = [
   {
@@ -67,5 +69,39 @@ const createTweetElement = function (tweet) {
          `);
   return $tweet;
 };
+const fetchTweets = () => {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'json',
+      success: (tweets) => {
+        console.log("data", tweets);
+        renderTweets(tweets);
+      },
+      error: (err) => {
+        console.log(`error: ${err}`)
+      } 
+    });
+  };
 
-renderTweets(data);
+  fetchTweets();
+const $form = $('#new-tweet-form');
+console.log($form);
+$form.on('submit', function(event){
+  event.preventDefault();
+  console.log('The form was submitted!')
+  const serializedData = $(this).serialize();
+
+  console.log(serializedData);
+
+  $.ajax({
+    url : "/tweets",
+    method : "POST",
+    data : serializedData
+  }).then(res =>{
+      console.log(res);
+  })  
+   
+  })
+});
+
