@@ -79,11 +79,14 @@ $(document).ready(function () {
     const serializedData = $(this).serialize();
     const text = serializedData.replace("text=", "");
     if (text.length > 140) {
-      alert("Tweet should not be empty and more than 140 char");
+      $("#alert-msg").show();
+
+      //alert("Tweet should not be empty and more than 140 char");
       return;
     }
     if (text === null || text === "") {
-      alert("Tweet cannot be empty.please enter data");
+      $("#alert-msg").show();
+      //alert("Tweet cannot be empty.please enter data");
       return;
     }
     $.post("/tweets", serializedData, (response) => {
