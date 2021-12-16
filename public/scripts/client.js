@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
 const data = [
   {
     user: {
@@ -25,8 +23,7 @@ const data = [
     created_at: timeago.format(1461113959088),
   },
 ];
-
-
+// get whole array of data
 const renderTweets = function (tweets) {
   // loops through tweets
   for (let tweet of tweets) {
@@ -37,7 +34,7 @@ const renderTweets = function (tweets) {
     $("#tweets-container").append($tweet);
   }
 };
-
+// create createTweetElement(Markup)   
 const createTweetElement = function (tweet) {
   const $tweet = $(`
       <div class="space-div">
@@ -70,6 +67,25 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 
+// Using AJAX fetch (GET) data from the server.
+const fetchTweets = () => {
+      $.ajax({
+        url: '/tweets',
+        method: 'GET',
+        dataType: 'json',
+        success: (tweets) => {
+          console.log("data", tweets);
+          renderTweets(tweets);
+        },
+        error: (err) => {
+          console.log(`error: ${err}`)
+        } 
+      });
+    };
+  
+fetchTweets();
+
+// Using AJAX send data to the server
 const $form = $('#new-tweet-form');
 console.log($form);
 $form.on('submit', function(event){
@@ -88,6 +104,6 @@ $form.on('submit', function(event){
   })  
 
   })
-  renderTweets(data);
+  //renderTweets(data);
 });
 
