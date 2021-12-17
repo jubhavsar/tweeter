@@ -15,46 +15,44 @@
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
-  
+ 
 </head>
-
 <body>
 
   <!-- Top nav bar (fixed) -->
-  <nav id="main-container">
+  <nav id="nav-container">
     <span id="nav-span-1">Tweeter</span>
-    <div>
-      <span class="nav-span">Write</span> <span class="nav-span-2"> a new tweet</span>
-      <div class="nav-span-3"> <i class="fa-solid fa-angles-down"></i></div>
+    <div id='left-nav'>
+      <span class="nav-span-2">Write</span> <span class="nav-span-3"> a new tweet</span>
+      <div class="nav-div"> <i class="fa-solid fa-angles-down"></i></div>
     </div>
   </nav>
 
+ <!-- Header -->
+ <div id="header-div">
+ <header class="header">
+  <div>
+    <img src="/images/profile-hex.png">
+  </div>
 
+  <div>
+    <h2 style="margin: 0px;"><span class="nav-span-2">Juhi</span> <span class="nav-span-3"> Bhavsar</span></h2>
+  </div>
+</header>
+</div>
+<div id="main-div">
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <!-- Header -->
-  <header class="header">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
 
-    <div>
-      <h2 style="margin: 0px;"><span class="nav-span">Juhi</span> <span class="nav-span-2"> Bhavsar</span></h2>
-    </div>
-  </header>
-    <!-- New tweet page -->
-    <div class="main-content">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+  <!-- New tweet page -->
       <form id="new-tweet-form" action="./tweets" method="POST">
         <div id="alert-msg" class="alert" hidden>
           <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
@@ -68,16 +66,14 @@
           <output id="my-output" name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
-    </section>
 
     <!-- Tweet List  -->
     <section id="tweets-container">
     </section>
-  </div>
   </main>
+</div>
 
   <!-- App JS (All Script)-->
-  <script src="./scripts/navbar.js"></script>
   <script src="./scripts/composer-char-counter.js"></script>
   <script src="./scripts/client.js"></script>
 

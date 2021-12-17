@@ -17,7 +17,7 @@ $(document).ready(function () {
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
       console.log($tweet);
-      // takes return value and appends it to the tweets container
+      // takes return value and appends it to the tweets container at top
       $("#tweets-container").prepend($tweet);
     }
   };
@@ -28,7 +28,7 @@ $(document).ready(function () {
     <article class="my-article">
       <header class="my-header">
         <div>
-          <img ${escape(tweet.user.avatars)}/>
+          <img src=${escape(tweet.user.avatars)}/>
           <span> ${escape(tweet.user.name)} </span>
         </div>
           <span class="email-color"> ${tweet.user.handle} </span>
@@ -84,7 +84,7 @@ $(document).ready(function () {
       $("#alert-msg").show();
       return;
     }
-    
+
     $.post("/tweets", serializedData, (response) => {
       loadTweets();
       $('#new-tweet-form')[0].reset();
