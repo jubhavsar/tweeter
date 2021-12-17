@@ -3,6 +3,7 @@
 
 <head>
   <!-- Meta Information -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   <title>Tweeter - Home Page</title>
 
   <!-- External CSS -->
@@ -26,6 +27,7 @@
 </head>
 
 <body>
+
   <!-- Top nav bar (fixed) -->
   <nav id="main-container">
     <span id="nav-span-1">Tweeter</span>
@@ -35,6 +37,11 @@
     </div>
   </nav>
 
+
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <!-- Header -->
   <header class="header">
     <div>
       <img src="/images/profile-hex.png">
@@ -44,9 +51,8 @@
       <h2 style="margin: 0px;"><span class="nav-span">Juhi</span> <span class="nav-span-2"> Bhavsar</span></h2>
     </div>
   </header>
-
-  <!-- Page-specific (main) content here -->
-  <main class="container">
+    <!-- New tweet page -->
+    <div class="main-content">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form id="new-tweet-form" action="./tweets" method="POST">
@@ -63,11 +69,14 @@
         </div>
       </form>
     </section>
+
+    <!-- Tweet List  -->
     <section id="tweets-container">
     </section>
+  </div>
   </main>
 
-  <!-- App JS -->
+  <!-- App JS (All Script)-->
   <script src="./scripts/navbar.js"></script>
   <script src="./scripts/composer-char-counter.js"></script>
   <script src="./scripts/client.js"></script>
