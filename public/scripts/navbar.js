@@ -1,4 +1,7 @@
+
 $(document).ready(function() {
+
+  // a script for fix navbar  
   $(document).scroll(function () {
       var scroll = $(this).scrollTop();
       var topDist = $("#main-container").position();
