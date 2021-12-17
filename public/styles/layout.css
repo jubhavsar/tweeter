@@ -24,3 +24,48 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ /* Desktop styles */
+@media only screen and (min-width: 1024px) {
+
+  header.header {
+    flex-grow: 1;
+  }
+  main.container {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-content{
+    flex-grow: 3;
+    padding: 20px;
+  }
+
+}
+
+/* mobile style */
+@media (max-width: 768px){
+
+#main-container {
+  background-color: transparent;
+}
+header.header {
+  padding: 0px;
+}
+nav.nav-span-1{
+  font-size: 10px;
+}
+nav.nav-span-3{
+  font-size: 5px;
+}
+nav.nav-span{
+  font-size: 5px;
+
+}
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  
+  
+  
+}
