@@ -14,7 +14,7 @@ hr{
   border-color: Transparent;
 }
 main{
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 button{
@@ -34,7 +34,9 @@ button{
   margin-top: 1.5em;
   border: 1px solid black;
 }
-.my-article:hover {
+.my-article {
+  padding: 2px;
+  border: solid black 1px;
   margin: 3%;
   box-shadow: 5px 10px rgb(135, 156, 250);
 }
