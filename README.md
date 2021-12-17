@@ -19,6 +19,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Mobile display Screenshot of tweeter project"]()
-!["Screenshot of tweet compos box"]()
-!["Screenshot of tweets"]()
+!["Mobile display Screenshot of tweeter project"](https://github.com/jubhavsar/tweeter/blob/master/views/mobile-display.png)
+!["Screenshot of tweet compos box"](https://github.com/jubhavsar/tweeter/blob/master/views/tweet-box.png)
+!["Screenshot of tweets"](https://github.com/jubhavsar/tweeter/blob/master/views/tweets.png)
